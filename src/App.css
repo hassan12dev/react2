@@ -1,94 +1,104 @@
-/* Gradient background */
-body {
-  font-family: Arial, sans-serif;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+  body {
+  
   background: linear-gradient(to bottom, #6EE7B7, #3B82F6);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  align-items: flex-start;
+  
 }
 
-/* Container card */
 .container {
   background: white;
+
+   margin-top: 80px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
- width: 500px;
-min-height: 120px;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  width: 350px;
+  
 }
 
-/* Title */
-.container h1 {
-  font-size: 20px;
+h3 {
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
   margin-bottom: 15px;
 }
 
-/* Input and button in one line */
-input[type="text"] {
-  padding: 8px;
-  width: 80%;
-  border: 1px solid #898989;
-  border-radius: 4px;
-  outline: none;
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
-button {
-  padding: 8px 12px;
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  background: #4285f4;
+  color: white;
   border: none;
-  border-radius: 4px;
-  margin-left: 5px;
+  padding: 8px 15px;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.task-item input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.task-item span {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.edit-btn {
+  background: #4285f4;
   color: white;
 }
 
-/* Add / Update button */
-button.add-btn {
-  width: 70px;
-  background-color: #8b5cf6; /* purple */
+.delete-btn {
+  background: #ef5350;
+  color: white;
 }
 
-button.add-btn:hover {
-  background-color: #7c3aed;
-}
-
-/* Delete button */
-button.delete-btn {
-  background-color: #ef4444; /* red */
-}
-
-button.delete-btn:hover {
-  background-color: #dc2626;
-}
-
-/* Update button */
-button.update-btn {
-  background-color: #3b82f6; /* blue */
-}
-
-button.update-btn:hover {
-  background-color: #2563eb;
-}
-.main-list{
-    display: flex;
-   
-    align-items: center;
-    justify-content: center;
-}
-/* List styling */
-li {
-  margin: 12px;
-  padding: 5px;
-  list-style: none;
-  background: #e8e8e8;
-  min-width: 70%;
-  height: 30px;
-  border-radius: 4px;
-  text-align: left;
- 
-
-}
 @media (max-width: 600px) {
   .container {
    width: 250px;
